@@ -79,15 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     
-    // "Ask Hayley" Button Placeholder
-    const askHayleyButton = document.querySelector("#ask-hayley-placeholder button");
-    if (askHayleyButton) {
-        askHayleyButton.addEventListener("click", () => {
-            console.log("Ask Hayley button clicked.");
-            // TODO: Implement chatbot integration or link.
-            alert("Placeholder: Implement 'Ask Hayley' interaction.");
-        });
-    }
+
 
     // --- Sticky Nav Shadow/Glow on Scroll ---
     const nav = document.querySelector('.main-nav');
