@@ -1,0 +1,501 @@
+/* Agents Page Specific Styles - Social Media Platform Design */
+
+/* Hero Section for Agents Page */
+#agents-hero {
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #111 100%);
+    padding: 8rem 5% 4rem 5%;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.agents-hero-content h1 {
+    font-family: 'Archive', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 32px #111;
+}
+
+.agents-hero-content p {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Feed Container - Social Media Layout */
+#agents-feed {
+    background: #0a0a0a;
+    padding: 4rem 5%;
+    min-height: 100vh;
+}
+
+.feed-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Agent Profile Cards - Social Media Style */
+.agent-profile-card {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.agent-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Header */
+.profile-header {
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.profile-avatar {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    border: 3px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.scout-avatar {
+    background: linear-gradient(135deg, #4187C1 0%, #2563eb 100%);
+    border-color: #4187C1;
+}
+
+.kont-avatar {
+    background: linear-gradient(135deg, #fa3e05 0%, #dc2626 100%);
+    border-color: #fa3e05;
+}
+
+.ticket-avatar {
+    background: linear-gradient(135deg, #51cf66 0%, #10b981 100%);
+    border-color: #51cf66;
+}
+
+.avatar-icon:hover {
+    transform: scale(1.05);
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #1a1a1a;
+}
+
+.status-indicator.online {
+    background: #51cf66;
+    box-shadow: 0 0 8px rgba(81, 207, 102, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-family: 'Archive', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.profile-tagline {
+    color: #4187C1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Archive', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 0.2rem;
+    letter-spacing: 0.05em;
+}
+
+/* Post Content */
+.profile-content {
+    padding: 0;
+}
+
+.post {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.post-time {
+    color: #888;
+}
+
+.post-status {
+    color: #51cf66;
+    font-weight: 600;
+}
+
+.post-content h3 {
+    font-family: 'Archive', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.post-content p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Capabilities Grid */
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.capability {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.capability:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.capability-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.capability span:last-child {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Recent Activity */
+.recent-activity {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recent-activity h4 {
+    font-family: 'Archive', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-activity li {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+    line-height: 1.4;
+}
+
+.recent-activity li:last-child {
+    margin-bottom: 0;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    letter-spacing: 0.05em;
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, #4187C1 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(65, 135, 193, 0.3);
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(65, 135, 193, 0.4);
+}
+
+.action-btn.secondary {
+    background: transparent;
+    color: #4187C1;
+    border: 2px solid #4187C1;
+}
+
+.action-btn.secondary:hover {
+    background: rgba(65, 135, 193, 0.1);
+}
+
+.engagement {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Agent-specific styling */
+#scout-profile {
+    border-top: 3px solid #4187C1;
+}
+
+#kont-profile {
+    border-top: 3px solid #fa3e05;
+}
+
+#ticket-profile {
+    border-top: 3px solid #51cf66;
+}
+
+/* CTA Section */
+#agents-cta {
+    background: linear-gradient(135deg, 
+        rgba(65, 135, 193, 0.15) 0%, 
+        rgba(38, 50, 106, 0.25) 50%, 
+        rgba(65, 135, 193, 0.15) 100%
+    );
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    margin: 4rem 5% 2rem 5%;
+    padding: 4rem 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#agents-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.05) 0%, 
+        transparent 50%, 
+        rgba(65, 135, 193, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    font-family: 'Archive', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .agents-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .agents-hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    #agents-feed {
+        padding: 2rem 3%;
+    }
+    
+    .feed-container {
+        gap: 2rem;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    .post {
+        padding: 1.5rem;
+    }
+    
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .action-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .agents-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-info h2 {
+        font-size: 1.6rem;
+    }
+    
+    .avatar-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .profile-stats {
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+} 
