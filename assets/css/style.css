@@ -144,6 +144,51 @@ section h3 {
     padding: 0;
 }
 
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(65, 135, 193, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(65, 135, 193, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 25% 25%, rgba(65, 135, 193, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 
+        50px 50px,
+        50px 50px,
+        100px 100px,
+        150px 150px;
+    background-position: 
+        0 0,
+        0 0,
+        0 0,
+        25px 25px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 0%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.1) 70%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -515,26 +560,21 @@ section h3 {
     color: #1a1a1a;
 }
 
-/* CTA Section - Glass Morphism Design */
+/* CTA Section */
 #cta {
     background: linear-gradient(135deg, 
-        rgba(65, 135, 193, 0.25) 0%, 
-        rgba(38, 50, 106, 0.35) 50%, 
-        rgba(65, 135, 193, 0.20) 100%
+        rgba(65, 135, 193, 0.15) 0%, 
+        rgba(38, 50, 106, 0.25) 50%, 
+        rgba(65, 135, 193, 0.15) 100%
     );
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
-    box-shadow: 
-        0 8px 32px 0 rgba(65, 135, 193, 0.15),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
-    color: white;
+    margin: 4rem 5% 2rem 5%;
+    padding: 4rem 5%;
+    text-align: center;
     position: relative;
     overflow: hidden;
-    margin: 2rem 5%;
-    padding: 4rem 5%;
 }
 
 #cta::before {
@@ -545,100 +585,40 @@ section h3 {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0.05) 0%, 
         transparent 50%, 
-        rgba(65, 135, 193, 0.1) 100%
+        rgba(65, 135, 193, 0.05) 100%
     );
     pointer-events: none;
-    z-index: 1;
 }
 
-#cta > * {
+.cta-content {
     position: relative;
     z-index: 2;
 }
 
-#cta h2 {
-    margin-bottom: 2rem;
+.cta-content h2 {
+    font-family: 'Archive', sans-serif;
+    font-size: 2.5rem;
     font-weight: 800;
-    font-size: 2.8rem;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin-bottom: 1rem;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
-#cta .cta-button-primary {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #FFFFFF;
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50px;
-    padding: 1.2rem 2.8rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    box-shadow: 
-        0 8px 24px 0 rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 3.5rem;
-    position: relative;
-    overflow: hidden;
-    line-height: 1.4;
-    white-space: pre-line;
-    text-align: center;
+.cta-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
 }
 
-#cta .cta-button-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(255, 255, 255, 0.2) 50%, 
-        transparent 100%
-    );
-    transition: left 0.6s ease;
-}
-
-#cta .cta-button-primary:hover::before {
-    left: 100%;
-}
-
-#cta .cta-button-primary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 
-        0 12px 32px 0 rgba(0, 0, 0, 0.2),
-        0 0 20px 0 rgba(65, 135, 193, 0.3),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
-}
-
-#cta .cta-link-secondary {
-    color: rgba(255, 255, 255, 0.85);
-    display: inline-block; 
-    margin-top: 2rem;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-#cta .cta-link-secondary:hover {
-    color: #FFFFFF;
-    opacity: 1;
-    text-decoration: underline;
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 /* FAQ Section */
@@ -908,4 +888,11 @@ header {
 }
 nav {
     all: unset;
+}
+
+.hero-cta-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
