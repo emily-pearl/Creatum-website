@@ -577,8 +577,8 @@ section h3 {
     color: #FFFFFF;
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 50px;
-    padding: 1.2rem 3.5rem;
-    font-size: 1.2rem;
+    padding: 1.2rem 2.8rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -586,9 +586,12 @@ section h3 {
         0 8px 24px 0 rgba(0, 0, 0, 0.15),
         inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+    line-height: 1.4;
+    white-space: pre-line;
+    text-align: center;
 }
 
 #cta .cta-button-primary::before {
@@ -624,24 +627,18 @@ section h3 {
 #cta .cta-link-secondary {
     color: rgba(255, 255, 255, 0.85);
     display: inline-block; 
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 1rem;
     letter-spacing: 0.03em;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 #cta .cta-link-secondary:hover {
     color: #FFFFFF;
-    background: rgba(255, 255, 255, 0.1);
-    text-decoration: none;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    text-decoration: underline;
 }
 
 /* FAQ Section */
@@ -912,4 +909,3 @@ header {
 nav {
     all: unset;
 }
-
