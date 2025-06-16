@@ -447,117 +447,229 @@ section h3 {
 }
 
 /* How It Works Section */
-.steps-placeholder {
+.steps-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: stretch; 
     gap: 1rem;
-    flex-wrap: wrap; 
-    /* TODO: Replace with actual diagram styling */
-    border: 1px dashed #555; /* Darker dashed border */
-    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
 }
 
 .step {
-    flex-basis: 250px; 
+    flex: 1;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: stepFadeIn 0.6s ease-out forwards;
+}
+
+.step:nth-child(1) { animation-delay: 0.2s; }
+.step:nth-child(3) { animation-delay: 0.6s; }
+.step:nth-child(5) { animation-delay: 1s; }
+
+.step-content {
+    background: rgba(65, 135, 193, 0.1);
+    border: 1px solid rgba(65, 135, 193, 0.2);
+    border-radius: 12px;
     padding: 1.5rem;
-    background-color: #2b2b2b; /* Match feature item bg */
-    border: 1px solid #444; /* Match feature item border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(65, 135, 193, 0.15);
 }
 
 .step h3 {
-    font-size: 1.2rem; /* Bolded via section h3 */
-    margin-bottom: 0.5rem;
-}
-
-.step-arrow {
-    font-size: 2.5rem;
     color: #4187C1;
-    align-self: center; 
-}
-
-/* Benefits Section */
-.benefits-container {
-    display: flex;
-    gap: 3rem;
-    text-align: left;
-    align-items: flex-start; 
-    flex-wrap: wrap; 
-}
-
-.benefits-highlight {
-    flex: 1.2; 
-    font-style: italic;
-    background-color: #2b2b2b; /* Match feature item bg */
-    padding: 2rem;
-    border-left: 5px solid #4187C1; /* Medium blue accent */
-    color: #cccccc;
-}
-
-.benefits-highlight h4 {
-    font-style: normal;
-    margin-top: 0;
     margin-bottom: 1rem;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.benefits-highlight p {
-    margin-bottom: 1rem;
-}
-
-.benefits-highlight strong {
-    display: block;
-    margin-top: 0.5rem;
-    font-style: normal;
-    color: #e0e0e0;
-}
-
-.benefits-list {
-    flex: 1;
-    padding-top: 1rem; 
-}
-
-.benefits-list h3 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem; /* Bolded via section h3 */
-}
-
-.benefits-list ul {
-    list-style: none; 
-    padding-left: 0;
-}
-
-.benefits-list li {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    color: #cccccc;
-}
-
-.benefits-list li::before {
-    content: '\2713'; /* Checkmark */
-    color: #51cf66; /* Green checkmark */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
     font-size: 1.2rem;
 }
 
-#ask-hayley-placeholder button {
-    padding: 0.8rem 1.5rem;
-    background-color: transparent; 
-    color: #4187C1; 
-    border: 2px solid #4187C1; 
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+.step p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-#ask-hayley-placeholder button:hover {
-    background-color: #4187C1;
-    color: #1a1a1a;
+.step-connector {
+    width: 100px;
+    height: 40px;
+    opacity: 0;
+    animation: connectorFadeIn 0.6s ease-out forwards;
+}
+
+.step-connector:nth-child(2) { animation-delay: 0.4s; }
+.step-connector:nth-child(4) { animation-delay: 0.8s; }
+
+.connector-line {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    animation: drawLine 1s ease-out forwards, moveLine 2s linear infinite;
+}
+
+.connector-arrow {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: drawArrow 0.6s ease-out forwards, moveArrow 2s linear infinite;
+}
+
+@keyframes stepFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes connectorFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawArrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes moveLine {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -80;
+    }
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .steps-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .step {
+        max-width: 100%;
+    }
+    
+    .step-connector {
+        transform: rotate(90deg);
+        margin: -1rem 0;
+    }
+}
+
+/* Benefits Section Styles */
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 2rem 1rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+}
+
+.benefit-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-list li {
+    margin-bottom: 1.5rem;
+}
+
+.benefit-list li:last-child {
+    margin-bottom: 0;
+}
+
+.benefit-title {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.benefit-list p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.benefit-card.before {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-card.after {
+    border: 1px solid rgba(250, 62, 5, 0.3);
+    background: rgba(250, 62, 5, 0.05);
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 1.5rem;
+    }
 }
 
 /* CTA Section */
@@ -731,11 +843,11 @@ footer a:hover {
         font-size: 2rem;
     }
 
-    .steps-placeholder {
+    .steps-container {
         flex-direction: column;
         align-items: center;
     }
-    .step-arrow {
+    .step-connector {
         transform: rotate(90deg);
         margin: 0.5rem 0;
     }
