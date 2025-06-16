@@ -61,15 +61,7 @@
                 </div>
                 <div class="feature-connector">
                     <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#fa3e05" fill-opacity="0.5">
-                            <animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite"/>
-                        </circle>
-                        <rect x="12" y="5" width="36" height="2" rx="1" fill="#fff" fill-opacity="0.3">
-                            <animate attributeName="width" values="36;48;36" dur="1.8s" repeatCount="indefinite"/>
-                        </rect>
-                        <circle cx="54" cy="6" r="6" fill="#fa3e05" fill-opacity="0.5">
-                            <animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite"/>
-                        </circle>
+                        <rect x="0" y="5" width="60" height="2" rx="1" fill="#fff" fill-opacity="0.3"/>
                     </svg>
                 </div>
                 <div class="feature-anim">
@@ -82,15 +74,7 @@
                 </div>
                 <div class="feature-connector">
                     <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6" cy="6" r="6" fill="#fa3e05" fill-opacity="0.5">
-                            <animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite"/>
-                        </circle>
-                        <rect x="12" y="5" width="36" height="2" rx="1" fill="#fff" fill-opacity="0.3">
-                            <animate attributeName="width" values="36;48;36" dur="1.8s" repeatCount="indefinite"/>
-                        </rect>
-                        <circle cx="54" cy="6" r="6" fill="#fa3e05" fill-opacity="0.5">
-                            <animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite"/>
-                        </circle>
+                        <rect x="0" y="5" width="60" height="2" rx="1" fill="#fff" fill-opacity="0.3"/>
                     </svg>
                 </div>
                 <div class="feature-anim">
@@ -106,48 +90,86 @@
 
         <section id="how-it-works">
             <h2>How an AI Agent Works</h2>
-            <!-- TODO: Replace this div with an actual visual flow diagram (SVG or image) -->
-            <div class="steps-placeholder">
+            <div class="steps-container">
                 <div class="step">
-                    <h3>🔍 Senses the environment</h3>
-                    <p>Agents understand the current task or situation that is triggered by an event like a received E-Mail.</p>
+                    <div class="step-content">
+                        <h3>Senses the environment</h3>
+                        <p>Agents understand the current task or situation that is triggered by an event like a received E-Mail.</p>
+                    </div>
                 </div>
-                <div class="step-arrow">&rarr;</div>
-                <div class="step">
-                    <h3>🧠 Thinks through rules or goals</h3>
-                    <p>Agents reason and compare options based on provided knowledge and instructions</p>
+                <div class="step-connector">
+                    <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="connector-line" d="M0 20 H80" stroke="#4187C1" stroke-width="2"/>
+                        <path class="connector-arrow" d="M80 20 L95 20 L80 10 M95 20 L80 30" stroke="#4187C1" stroke-width="2"/>
+                    </svg>
                 </div>
-                 <div class="step-arrow">&rarr;</div>
                 <div class="step">
-                    <h3>⚙️ Takes action</h3>
-                    <p>Agents execute decisions across applications through standard interfaces and log all activities in an auditable manner.</p>
+                    <div class="step-content">
+                        <h3>Thinks through rules or goals</h3>
+                        <p>Agents reason and compare options based on provided knowledge and instructions</p>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="connector-line" d="M0 20 H80" stroke="#4187C1" stroke-width="2"/>
+                        <path class="connector-arrow" d="M80 20 L95 20 L80 10 M95 20 L80 30" stroke="#4187C1" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Takes action</h3>
+                        <p>Agents execute decisions across applications through standard interfaces and log all activities in an auditable manner.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="benefits">
-            <h2>Imagine What Task Execution Could Look Like with CREATUM</h2>
-            <div class="benefits-container before-after-section">
-                <div class="before-clarity">
-                    <h4>Before CREATUM:</h4>
-                    <ul>
-                        <li><strong>Execution Errors:</strong> Manual steps lead to costly mistakes and risks.</li>
-                        <li><strong>High Costs:</strong> Repetitive tasks waste valuable team hours.</li>
-                        <li><strong>Lost Time:</strong>Admin work blocks focus on steering priorities.</li>
-                       
-                    </ul>
-                </div>
-                <div class="after-clarity">
-                    <h4>After CREATUM:</h4>
-                     <ul>
-                        <li><strong>Precise Results:</strong> Agents follow rules, reduce risk, increase quality.</li>
-                        <li><strong>Cost Savings:</strong> Tasks are automated, cost per case drops sharply.</li>
-                        <li><strong>Strategic Focus:</strong> Teams manage exceptions, not routine work.</li>
-                     
-                    </ul>
+            <h2>What Task Execution Looks Like with CREATUM</h2>
+            <div class="benefits-container">
+                <div class="benefits-grid">
+                    <div class="benefit-card before">
+                        <div class="benefit-header">
+                            <span class="benefit-icon">⚠️</span>
+                            <h3>Before CREATUM</h3>
+                        </div>
+                        <ul class="benefit-list">
+                            <li>
+                                <span class="benefit-title">Execution Errors</span>
+                                <p>Manual steps lead to costly mistakes and risks</p>
+                            </li>
+                            <li>
+                                <span class="benefit-title">High Costs</span>
+                                <p>Repetitive tasks waste valuable team hours</p>
+                            </li>
+                            <li>
+                                <span class="benefit-title">Lost Time</span>
+                                <p>Admin work blocks focus on steering priorities</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card after">
+                        <div class="benefit-header">
+                            <span class="benefit-icon">✨</span>
+                            <h3>After CREATUM</h3>
+                        </div>
+                        <ul class="benefit-list">
+                            <li>
+                                <span class="benefit-title">Precise Results</span>
+                                <p>Agents follow rules, reduce risk, increase quality</p>
+                            </li>
+                            <li>
+                                <span class="benefit-title">Cost Savings</span>
+                                <p>Tasks are automated, cost per case drops sharply</p>
+                            </li>
+                            <li>
+                                <span class="benefit-title">Strategic Focus</span>
+                                <p>Teams manage exceptions, not routine work</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </section>
          
         <section id="cta">
