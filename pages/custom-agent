@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Own AI Agent - CREATUM</title>
+    <meta name="description" content="Build your own custom AI agent with CREATUM's expert guidance and implementation support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Archive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/agents-style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/creatum_logo_white.png" alt="Creatum Logo" style="height: 40px;">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../index.html#about" class="nav-link">About Us</a>
+                    <a href="https://calendly.com/immo-brueggemann-creatum/free-consultation-with-creatum" target="_blank" class="nav-link">
+                        <button class="cta-button-header">Book a Call</button>
+                    </a>
+                    <span class="nav-link nav-lang">EN/DE</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="custom-agent-hero">
+            <div class="agents-hero-content">
+                <h1>Build Your Own AI Agent</h1>
+                <p>Custom AI solutions tailored to your unique business needs</p>
+            </div>
+        </section>
+
+        <section id="custom-agent-feed">
+            <div class="feed-container">
+                <div class="agent-profile-card" id="custom-agent">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <div class="avatar-icon custom-avatar">🤖</div>
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Custom AI Agent</h2>
+                            <p class="profile-tagline">Tailored to Your Needs</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Customized</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">4-6</span>
+                                    <span class="stat-label">Weeks Setup</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-label">Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <div class="post">
+                            <div class="post-header">
+                                <span class="post-time">Ready to Start</span>
+                                <span class="post-status">• New Projects Available</span>
+                            </div>
+                            <div class="post-content">
+                                <h3>🤖 Your Custom AI Solution</h3>
+                                <p>We'll help you build your own AI agent from the ground up. You provide the context and requirements, and we'll handle the technical implementation while teaching you how to maintain and evolve your agent.</p>
+                                
+                                <div class="capabilities-grid">
+                                    <div class="capability">
+                                        <span class="capability-icon">🎯</span>
+                                        <span>Custom Development</span>
+                                    </div>
+                                    <div class="capability">
+                                        <span class="capability-icon">📚</span>
+                                        <span>Knowledge Transfer</span>
+                                    </div>
+                                    <div class="capability">
+                                        <span class="capability-icon">🔄</span>
+                                        <span>Continuous Support</span>
+                                    </div>
+                                    <div class="capability">
+                                        <span class="capability-icon">📈</span>
+                                        <span>Performance Monitoring</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="recent-activity">
+                                    <h4>Development Process</h4>
+                                    <ul>
+                                        <li>✅ Requirements gathering & analysis</li>
+                                        <li>🛠️ Custom development & testing</li>
+                                        <li>📚 Knowledge transfer & training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="post-actions">
+                                <button class="action-btn primary">Start Your Project</button>
+                                <button class="action-btn secondary">View Case Studies</button>
+                                <div class="engagement">
+                                    <span>🚀 50+ custom agents deployed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom-agent-cta">
+            <div class="cta-content">
+                <h2>Ready to Build Your Custom AI Agent?</h2>
+                <p>Let's discuss your requirements and create a tailored solution</p>
+                <div class="cta-buttons">
+                    <button class="cta-button-primary">Start Consultation</button>
+                    <a href="../index.html" class="cta-link-secondary">Learn More About CREATUM</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CREATUM GmbH. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Imprint</a>
+    </footer>
+
+    <script src="../assets/js/agents-script.js"></script>
+</body>
+</html> 
