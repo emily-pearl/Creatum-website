@@ -54,6 +54,11 @@
         0 0 0 1px rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s, transform 0.6s;
+    max-width: 720px;
+    margin: 0 auto 2.5rem auto;
 }
 
 .agent-profile-card:hover {
@@ -63,11 +68,16 @@
         0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
-/* Profile Header */
+.agent-profile-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Profile Header - Centered layout with left avatar */
 .profile-header {
     padding: 2rem 2.5rem 1.5rem 2.5rem;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.02);
@@ -106,6 +116,11 @@
     border-color: #51cf66;
 }
 
+.custom-avatar {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e42 100%);
+    border-color: #fbbf24;
+}
+
 .avatar-icon:hover {
     transform: scale(1.05);
 }
@@ -133,6 +148,11 @@
 
 .profile-info {
     flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-info h2 {
@@ -180,6 +200,15 @@
     letter-spacing: 0.05em;
 }
 
+.stat-number.animated {
+    transition: color 0.4s, transform 0.4s;
+    will-change: color, transform;
+}
+.stat-number.animated:hover {
+    color: #fbbf24;
+    transform: scale(1.08);
+}
+
 /* Post Content */
 .profile-content {
     padding: 0;
@@ -223,10 +252,10 @@
     margin-bottom: 2rem;
 }
 
-/* Capabilities Grid */
+/* Capabilities Grid - 2 per row */
 .capabilities-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -239,12 +268,13 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
 }
 
 .capability:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #fbbf24;
 }
 
 .capability-icon {
@@ -416,6 +446,25 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+/* Gold-themed CTA Button for Custom Agent */
+.cta-button-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e42 100%);
+    color: #222;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.15);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.cta-button-primary:hover {
+    background: linear-gradient(135deg, #f59e42 0%, #fbbf24 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(251, 191, 36, 0.25);
 }
 
 /* Responsive Design */
