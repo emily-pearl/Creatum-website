@@ -988,9 +988,20 @@ footer a:hover {
     .nav-link:not(:last-child)::after { margin-left: 1.1rem; margin-right: -1.1rem; }
 }
 @media (max-width: 600px) {
+    /* Make header non-sticky on mobile to allow content visibility */
+    .main-nav {
+        position: relative;
+        top: auto;
+    }
+    
     .nav-container { flex-direction: column; align-items: flex-start; }
     .nav-links { flex-direction: column; align-items: flex-start; gap: 0.7rem; margin-top: 0.5rem; }
     .nav-link:not(:last-child)::after { display: none; }
+    
+    /* Ensure hero section is properly positioned on mobile */
+    #hero {
+        padding-top: 2rem;
+    }
 }
 
 /* Remove old nav styles */
